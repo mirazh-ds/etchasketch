@@ -16,18 +16,7 @@ function sizePrompt () {
         sizeH = 960/sizePrompt;
         sizeW = 960/sizePrompt;
 
-        if (parseInt(sizePrompt) > 160) {
-
-                alert("Size too high (must be between 16 and 160)!");
-                } else if (parseInt(sizePrompt) < 16) {
-                alert("Size too small (must be between 16 and 160)!");
-                } else if (Number.isInteger(sizeW)) {
-                createGrid();
-                } else if (isNaN(sizePrompt)) {
-                        alert("Not a number.")
-                } else {
-                        alert("Not a divisor of 960.")
-                }
+        createGrid();
 
 }
 
@@ -57,16 +46,18 @@ function paint() {
                 cellH.style.backgroundColor = `${color}`;
 
         })
+
         )
 
 }
 
 function erase() {
-        
+
         const cells = container.querySelectorAll('#cellH');
         cells.forEach(cellH => cellH.addEventListener("mouseover", () => {
                 cellH.style.backgroundColor = "white";
         }))
+        
 }
 
 function reset() {
