@@ -49,7 +49,7 @@ function createGrid() {
 
 function paint() {
 
-        let color = prompt('Type in your color (ex.: "black", "white", "red", "lightblue"...):')
+        let color = prompt('Type in your color (ex.: black, white, red, lightblue...):')
 
         const cells = container.querySelectorAll('#cellH');
         cells.forEach(cellH => cellH.addEventListener("mouseover", () => {

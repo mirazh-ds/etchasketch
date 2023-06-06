@@ -9,10 +9,19 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="btnContainer">
+        <h1>Weird basic sketch drawing thing</h1>
+        <p class="intro">After setting grid size and pencil color, you should be able to draw by hovering over the white space at the right.</p>
+        <p>To start, set the grid size:</p>
+        <button id="size" onclick="sizePrompt()">Modify size</button>
+        <p>Then, choose the color:</p>
+        <button id="startPainting" onclick="paint()">Select color</button>
+        <p>If you need to manual erase:</p>
+        <button id="eraser" onclick="erase()">Erase</button>
+        <p>If you need to reset the whole grid:</p>
+        <button id="reset" onclick="reset()">Reset</button>      
+    </div>
     <div class="container" id="container"></div>
-    <button id="size" onclick="sizePrompt()">Modify size</button>
-    <button id="startPainting" onclick="paint()">Select color</button>
-    <button id="eraser" onclick="erase()">Erase</button>
-    <button id="reset" onclick="reset()">Reset</button>   
+     
 </body>
 </html>
