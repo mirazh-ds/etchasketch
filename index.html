@@ -13,8 +13,30 @@
         <h1>Weird basic sketch drawing thing</h1>
         <p class="intro">After setting grid size and pencil color, you should be able to draw by hovering over the white space at the right.</p>
         <p>To start, set the grid size:</p>
+        <section class="size-selection">
+            <label for="size">Size:</label>
+            <select name="size" id="size">
+                <option value="16">16x16</option>
+                <option value="32">32x32</option>
+                <option value="64">64x64</option>
+                <option value="96">96x96</option>
+                <option value="120">120x120</option>
+                <option value="160">160x160, kinda heavy</option>
+            </select>
+        </section>
         <button id="size" onclick="sizePrompt()">Modify size</button>
         <p>Then, choose the color:</p>
+        <section class="color-selection">
+            <label for="color">Color:</label>
+            <select name="color" id="color">
+                <option value="black">Black</option>
+                <option value="purple">Purple</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="orange">Orange</option>
+            </select>
+        </section>
         <button id="startPainting" onclick="paint()">Select color</button>
         <p>If you need to manual erase:</p>
         <button id="eraser" onclick="erase()">Erase</button>

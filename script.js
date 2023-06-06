@@ -1,6 +1,7 @@
 const container = document.getElementById('container');
 container.style.borderStyle = "solid";
 container.style.borderColor = "black";
+
 var cellH;
 var size;
 var sizeW;
@@ -10,7 +11,7 @@ createGrid();
 
 function sizePrompt () {       
 
-        let sizePrompt = prompt("Type grid width (must be a divisor of 960 (16, 20, 24, 30, 32, 40, 48, 60, 64, 80, 96, 120, 160), between 16 and 160:")
+        let sizePrompt = document.getElementById('size').value;
         size = parseInt(sizePrompt)*parseInt(sizePrompt);
         sizeH = 960/sizePrompt;
         sizeW = 960/sizePrompt;
@@ -49,8 +50,7 @@ function createGrid() {
 
 function paint() {
 
-        let color = prompt('Type in your color (ex.: black, white, red, lightblue...):')
-
+        let color = document.getElementById('color').value;
         const cells = container.querySelectorAll('#cellH');
         cells.forEach(cellH => cellH.addEventListener("mouseover", () => {
 
@@ -62,6 +62,7 @@ function paint() {
 }
 
 function erase() {
+        
         const cells = container.querySelectorAll('#cellH');
         cells.forEach(cellH => cellH.addEventListener("mouseover", () => {
                 cellH.style.backgroundColor = "white";
